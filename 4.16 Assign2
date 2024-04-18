@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+
+int main()
+{
+   int h1, m1, s1, h2, m2, s2,h_result,m_result,s_result;
+   int m_surlpus=0, h_surplus=0;
+   while (1)
+   {
+      printf("Enter two times(h m s h m s)>> ");
+      scanf("%d", &h1);
+      if (h1 == 0)
+         break;
+      scanf("%d %d %d %d %d", &m1, &s1, &h2, &m2, &s2);
+      if (s1 + s2 >= 60)
+      {
+         s_result = (s1 + s2) % 60;
+
+      }
+      else
+         s_result = s1 + s2;
+      if (m1 + m2 >= 60)
+      {
+         m_result = (m1 + m2) % 60;
+         m_surlpus++;
+      }
+      else
+         m_result = m1 + m2;
+      if (h1 + h2 > 12)
+      {
+         h_result = (h1 + h2) % 12 + 1;
+      }
+      printf("%d %d %d\n", h_result, m_result + m_surlpus, s_result);
+
+
+   }
+   return 0;
+}
