@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+
+int main()
+{
+   int n1, n2, n3,max,min;
+   printf("Enter 3 integers>> ");
+   scanf("%d %d %d", &n1, &n2, &n3);
+   max = n1 >= n2 ? n1 : n2;
+   if (max <= n3)
+      max = n3;
+   min = n1 <= n2 ? n1 : n2;
+   if (min >= n3)
+      min = n3;
+
+   printf("max=%d min=%d\n", max, min);
+   return 0;
+}
