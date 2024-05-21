@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <math.h>
+#include <stdio.h>
+int convert_ten(char* n, int base)
+{
+	int size = strlen(n);
+	int num = 0;
+	char arr[1000];
+	for (int i = 0; i < size - 1; i++)
+	{
+		num += n[i] * pow(base, i);
+	}
+	
+	return num;
+}
+
+int convert_to()
+{
+
+}
+int main()
+{
+	int base1, base2;
+	char str[1000];
+
+
+	printf("Enter base-from,number,base_to>>");
+	scanf("%d %s %d", &base1, str, &base2);
+
+	
+	return 0;
+}
